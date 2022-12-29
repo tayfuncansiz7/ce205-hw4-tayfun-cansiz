@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72CC6DDB-41EB-4D3D-815E-AFA304983CEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ce205_hw4_application_cs</RootNamespace>
+    <AssemblyName>ce205-hw4-application-cs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="applications_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applications_form.Designer.cs">
+      <DependentUpon>applications_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="boyer-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="boyer-form.Designer.cs">
+      <DependentUpon>boyer-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="horspool_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="horspool_form.Designer.cs">
+      <DependentUpon>horspool_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hunt_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hunt_form.Designer.cs">
+      <DependentUpon>hunt_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="knuth-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="knuth-form.Designer.cs">
+      <DependentUpon>knuth-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="needleman-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="needleman-form.Designer.cs">
+      <DependentUpon>needleman-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="smith_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="smith_form.Designer.cs">
+      <DependentUpon>smith_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trie-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trie-form.Designer.cs">
+      <DependentUpon>trie-form.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ce205-hw4-knuth-horspool-boyer\ce205-hw4-knuth-horspool-boyer.csproj">
+      <Project>{4a377a02-76bb-48c1-93df-55c740bf21ce}</Project>
+      <Name>ce205-hw4-knuth-horspool-boyer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ce205-hw4-needleman-smith-hunt\ce205-hw4-needleman-smith-hunt.csproj">
+      <Project>{b38433a7-cb2c-41af-bce7-4de923b46c10}</Project>
+      <Name>ce205-hw4-needleman-smith-hunt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ce205-hw4-trie\ce205-hw4-trie.csproj">
+      <Project>{eb8534b3-4033-4116-b28f-f1cdbff931a6}</Project>
+      <Name>ce205-hw4-trie</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="applications_form.resx">
+      <DependentUpon>applications_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="boyer-form.resx">
+      <DependentUpon>boyer-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="horspool_form.resx">
+      <DependentUpon>horspool_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hunt_form.resx">
+      <DependentUpon>hunt_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="knuth-form.resx">
+      <DependentUpon>knuth-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="needleman-form.resx">
+      <DependentUpon>needleman-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="smith_form.resx">
+      <DependentUpon>smith_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trie-form.resx">
+      <DependentUpon>trie-form.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
